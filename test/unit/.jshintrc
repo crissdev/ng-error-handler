@@ -1,0 +1,31 @@
+{
+    "node":      true,
+    "devel":     true,
+    "nonew":     true,
+    "curly":     true,
+    "noarg":     true,
+    "trailing":  true,
+    "forin":     true,
+    "noempty":   true,
+    "quotmark":  "single",
+    "eqeqeq":    true,
+    "strict":    true,
+    "undef":     true,
+    "bitwise":   true,
+    "newcap":    true,
+    "immed":     true,
+    "browser":   true,
+    "camelcase": true,
+    "freeze":    true,
+    "globals":   {
+        "angular":  false,
+        "jasmine": false,
+        "describe": false,
+        "it": false,
+        "beforeEach": false,
+        "afterEach": false,
+        "expect": false,
+        "module": false,
+        "inject": false
+    }
+}

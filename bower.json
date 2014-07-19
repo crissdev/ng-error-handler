@@ -1,0 +1,33 @@
+{
+  "name": "ng-error-handler",
+  "version": "0.0.1",
+  "homepage": "https://github.com/CrissDev/ng-error-handler",
+  "authors": [
+    "cristian <t4013-github@yahoo.com>"
+  ],
+  "description": "A localized error handler for AngularJS",
+  "keywords": [
+    "ng-error-handler",
+    "error-handler",
+    "angular-error-handler",
+    "ng",
+    "angular",
+    "angular-translate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.20",
+    "angular-translate": "~2.2.0",
+    "bootstrap": "~3.2.0",
+    "angular-bootstrap": "~0.11.0",
+    "angular-mocks": "~1.2.20"
+  }
+}
