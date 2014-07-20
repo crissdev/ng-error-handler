@@ -59,7 +59,7 @@
 
                     formatError(error)
                         .then(function(errorMessage) {
-                            $rootScope.$emit(errorEventName, errorMessage);
+                            $rootScope.$emit(errorEventName, errorMessage, errorCode);
                         });
                 }
 
