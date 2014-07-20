@@ -45,7 +45,7 @@
                     return deferred.promise;
                 }
 
-                function handleError(error) {
+                function handleError(error, params) {
                     var errorCode = _getErrorCode(error),
                         customHandler = _customHandlers[errorCode];
 
@@ -57,7 +57,7 @@
                         return;
                     }
 
-                    formatError(error)
+                    formatError(error, params)
                         .then(function(errorMessage) {
                             $rootScope.$emit(errorEventName, errorMessage, errorCode);
                         });
