@@ -49,17 +49,18 @@
                     var errorCode = _getErrorCode(error),
                         customHandler = _customHandlers[errorCode];
 
-                    if (customHandler && angular.isFunction(customHandler)) {
-                        customHandler(error);
-
-                        // A custom error handler should perform an action that no longer needs to notify the rootScope
-                        // about the error (ie. redirect to login/maintenance/etc. page)
-                        return;
-                    }
-
-                    formatError(error, params)
+                    return formatError(error, params)
                         .then(function(errorMessage) {
-                            $rootScope.$emit(errorEventName, errorMessage, errorCode);
+                            if (customHandler && angular.isFunction(customHandler)) {
+                                customHandler(error);
+
+                                // A custom error handler should perform an action that no longer needs to notify the rootScope
+                                // about the error (ie. redirect to login/maintenance/etc. page)
+                            }
+                            else {
+                                $rootScope.$emit(errorEventName, errorMessage, errorCode);
+                            }
+                            return errorMessage;
                         });
                 }
 
