@@ -2,6 +2,9 @@
 
 A localized error handler for AngularJS
 
+[![Build Status](https://travis-ci.org/CrissDev/ng-error-handler.svg?branch=master)](https://travis-ci.org/CrissDev/ng-error-handler)
+[![devDependency Status](https://david-dm.org/CrissDev/ng-error-handler/dev-status.svg)](https://david-dm.org/CrissDev/ng-error-handler#info=devDependencies)
+
 
 ### Dependencies
 
