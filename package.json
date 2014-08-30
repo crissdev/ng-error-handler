@@ -8,6 +8,7 @@
   "scripts": {
     "test": "grunt karma"
   },
+  "main": "dist/error-handler.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/CrissDev/ng-error-handler.git"
