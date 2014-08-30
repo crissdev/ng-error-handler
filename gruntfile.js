@@ -2,9 +2,11 @@
 module.exports = function(grunt) {
     'use strict';
 
-    // Load Grunt tasks
-    'grunt-contrib-copy grunt-contrib-jshint grunt-contrib-uglify grunt-contrib-watch grunt-karma grunt-ngdocs grunt-bump'.split(' ').forEach(grunt.loadNpmTasks);
-
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.initConfig({
         copy: {
