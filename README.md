@@ -2,8 +2,8 @@
 
 A localized error handler for AngularJS
 
-[![Build Status](https://travis-ci.org/CrissDev/ng-error-handler.svg?branch=master)](https://travis-ci.org/CrissDev/ng-error-handler)
-[![devDependency Status](https://david-dm.org/CrissDev/ng-error-handler/dev-status.svg)](https://david-dm.org/CrissDev/ng-error-handler#info=devDependencies)
+[![Build Status](https://travis-ci.org/crissdev/ng-error-handler.svg?branch=master)](https://travis-ci.org/crissdev/ng-error-handler)
+[![devDependency Status](https://david-dm.org/crissdev/ng-error-handler/dev-status.svg)](https://david-dm.org/crissdev/ng-error-handler#info=devDependencies)
 
 
 ### Dependencies
@@ -42,14 +42,14 @@ Defines the event name to use when notifying through $rootScope.
 
 > Service in cdevErrorHandling module
 
-Provides methods to handle and format errors. 
+Provides methods to handle and format errors.
 The format method will attempt to retrieve a localized error message through $translate service.
-The service also provides a way to define custom error handlers - case in which the error event 
+The service also provides a way to define custom error handlers - case in which the error event
 will no longer be triggered through $rootScope.$emit method.
 
 ##### cdevErrorBox
 
 > Directive in cdevErrorHandling module
 
-Provides a way to display the error received through $rootScope (using cdevErrorEventName), or 
+Provides a way to display the error received through $rootScope (using cdevErrorEventName), or
 manually using the methods injected in the current scope.
