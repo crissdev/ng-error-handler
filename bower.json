@@ -1,6 +1,6 @@
 {
   "name": "ng-error-handler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/error-handler.js",
   "homepage": "https://github.com/crissdev/ng-error-handler",
   "authors": [

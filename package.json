@@ -1,6 +1,6 @@
 {
   "name": "ng-error-handler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A localized error handler for AngularJS",
   "directories": {
     "test": "test"
