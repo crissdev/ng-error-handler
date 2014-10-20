@@ -107,5 +107,55 @@ describe('cdev-error-handler', function() {
                 });
             $rootScope.$digest();
         }));
-});
 
+    it('should emit error event on $rootScope', inject(function(cdevErrorHandler, cdevErrorEventName, $rootScope) {
+        var _errorEventName, _errorMessage, _errorCode;
+
+        $rootScope.$on(cdevErrorEventName, function(event, errorMessage, errorCode) {
+            _errorEventName = event.name;
+            _errorMessage = errorMessage;
+            _errorCode = errorCode;
+        });
+        cdevErrorHandler.handle(new Error('timeout'));
+        $rootScope.$digest();
+
+        expect(_errorEventName).toBe(cdevErrorEventName);
+        expect(_errorMessage).toBe('Request timed out');
+        expect(_errorCode).toBe('timeout');
+    }));
+
+    //---------------------------------------------------------------------------------------------
+    //- Tests for directive
+
+    it('should render the error box', inject(function(cdevErrorHandler, $rootScope, $compile) {
+        var element = angular.element('<div cdev-error-box></div>');
+        var scope = $rootScope.$new();
+
+        $compile(element)(scope);
+        scope.$digest();
+
+        // Check if initialized correctly
+        expect(scope.pageError).toBe('');
+        expect(typeof scope.clearPageError).toBe('function');
+        expect(typeof scope.setPageError).toBe('function');
+        expect(element.find('span').length).toBe(0);
+
+        // Manually set an error message
+        scope.setPageError('an error message');
+        scope.$digest();
+        expect(scope.pageError).toBe('an error message');
+
+        // Test if the error is handled and localized
+        cdevErrorHandler.handle(new Error('timeout'));
+        scope.$digest();
+        expect(scope.pageError).toBe('Request timed out');
+        expect(element.find('span').eq(2).text()).toBe('Request timed out');
+
+        // Clear the error
+        scope.clearPageError();
+        scope.$digest();
+        expect(scope.pageError).toBe('');
+        expect(element.find('span').length).toBe(0);
+    }));
+
+});

@@ -53,3 +53,8 @@ will no longer be triggered through $rootScope.$emit method.
 
 Provides a way to display the error received through $rootScope (using cdevErrorEventName), or
 manually using the methods injected in the current scope.
+
+
+### License
+
+MIT © [Cristian Trifan](http://crissdev.com)

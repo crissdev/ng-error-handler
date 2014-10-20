@@ -81,7 +81,7 @@
         .directive('cdevErrorBox', ['$rootScope', 'cdevErrorEventName', function($rootScope, errorEventName) {
             return {
                 restrict: 'A',
-                template: '<alert ng-if=\"pageError\" type=\"danger\" close=\"clearPageError()\">{{pageError}}</alert>',
+                template: '<alert ng-if="pageError" type="danger" close="clearPageError()">{{pageError}}</alert>',
                 controller: function($scope) {
                     $scope.pageError = '';
 

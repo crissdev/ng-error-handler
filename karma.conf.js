@@ -18,7 +18,7 @@ module.exports = function(config) {
             'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
             'vendor/angular-mocks/angular-mocks.js',
             'src/error-handler.js',
-            'test/unit/**/*Spec.js'
+            'test/**/*Spec.js'
         ],
 
         // list of files to exclude
