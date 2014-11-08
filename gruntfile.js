@@ -30,7 +30,8 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     mangle: true,
-                    compress: true
+                    compress: true,
+                    sourceMap: true
                 },
                 files: {
                     'dist/error-handler.min.js': 'src/error-handler.js'
