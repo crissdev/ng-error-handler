@@ -15,7 +15,7 @@ A localized error handler for AngularJS
 
 ### Demo
 
-An example of how to use the cdevErrorBox directive on the page is available in [this](http://jsfiddle.net/cristian_trifan/9UqM9/) fiddle.
+An example of how to use the cdevErrorBox directive on the page is available in [this](http://jsfiddle.net/crissdev/9UqM9/) fiddle.
 
 
 ### Installation
